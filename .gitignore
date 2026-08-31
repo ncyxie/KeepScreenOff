@@ -14,3 +14,6 @@
 .cxx
 .idea
 *.apk
+keystore.properties
+*.jks
+*.keystore

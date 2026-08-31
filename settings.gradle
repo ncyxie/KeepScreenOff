@@ -1,2 +1,27 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+// Provides a repository for resolving and downloading JVM toolchains. Gradle 9
+// no longer permits automatic toolchain downloading without one configured, and
+// Studio's :updateDaemonJvm task fails without it.
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        // If you build the LEGACY (api:82) variant instead, add:
+        // maven { url 'https://api.xposed.info/' }
+    }
+}
+
+rootProject.name = "KeepScreenOff"
 include ':app'
-rootProject.name = "Disable-FLAG_KEEP_SCREEN_ON"

@@ -1,2 +1,6 @@
--keep class com.w311ang.disable_flag_keep_screen_on.DisableFlagKeepScreenOn {*;}
--keep class de.robv.android.xposed.** {*;}
+# Required by libxposed: keep entry classes and rewrite java_init.list if obfuscated.
+-dontwarn io.github.libxposed.annotation.**
+-adaptresourcefilecontents META-INF/xposed/java_init.list
+-keep,allowoptimization,allowobfuscation public class * extends io.github.libxposed.api.XposedModule {
+    public <init>();
+}
