@@ -20,7 +20,7 @@ jobs:
         run: chmod +x gradlew
       - name: Build with Gradle
         run: ./gradlew assembleDebug
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: apk-${{ github.sha }}
           path: app/build/outputs/apk/debug
