@@ -4,13 +4,12 @@ Xposed module that stops selected apps from holding the screen awake. The
 display turns off on your system screen-timeout instead.
 
 Handles both the `FLAG_KEEP_SCREEN_ON` window flag and screen wakelocks, which
-video players acquire during playback. `PARTIAL_WAKE_LOCK` is left alone, so
-background audio and downloads are unaffected.
+video players acquire during playback. `PARTIAL_WAKE_LOCK` is not affected.
 
 ## Requirements
 
 - LSPosed or Vector, with libxposed API 102
-- Android 8.0+
+- Android 8.1+
 
 ## Usage
 
